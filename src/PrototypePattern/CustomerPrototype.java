@@ -18,7 +18,6 @@ public class CustomerPrototype implements Cloneable {
     private char gender='X';
 
     public CustomerPrototype(String firstName, String lastName, String tcId, String phoneNumber) {
-
         this.firstName = firstName;
         this.lastName = lastName;
         this.tcId = tcId;
@@ -26,8 +25,13 @@ public class CustomerPrototype implements Cloneable {
     }
 
     @Override
-    public CustomerPrototype clone() throws CloneNotSupportedException {
-        CustomerPrototype c = (CustomerPrototype) super.clone();
+    public CustomerPrototype clone() {
+        CustomerPrototype c = null;
+        try {
+            c = (CustomerPrototype) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
         c.setFirstName("Unknown");
         c.setLastName("Unknown");
         c.setTcId("Unknown");

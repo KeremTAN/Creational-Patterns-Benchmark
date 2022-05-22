@@ -1,5 +1,8 @@
 package BuilderPattern;
 
+import CustomerPackage.ACustomer;
+import CustomerPackage.EmptyCustomer;
+
 public class CustomerBuilder {
     private String firstName="Unknown";
     private String lastName="Unknown";
@@ -41,8 +44,8 @@ public class CustomerBuilder {
         return builder;
     }
 
-    public CustomerB buildCustomer(){
-        CustomerB customer = new CustomerB();
+    public ACustomer buildCustomer(){
+        ACustomer customer = new EmptyCustomer();
         customer.setFirstName(firstName);
         customer.setLastName(lastName);
         customer.setAddress(address);

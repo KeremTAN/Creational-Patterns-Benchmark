@@ -1,12 +1,15 @@
 package SimpleFactoryPattern;
+import CustomerPackage.ACustomer;
+import CustomerPackage.GreatCustomer;
+import CustomerPackage.StandartCustomer;
 
 public class CustomerSimpleFactory {
-    public CustomerSF createCustomer(int CustonerID, String firstName, String lastName, String tcId, String phoneNumber, char gender){
+    public ACustomer createCustomer(int CustonerID, String firstName, String lastName, String tcId, String phoneNumber, char gender){
         if(CustonerID == 1){
-            return new CustomerSF(firstName, lastName, tcId, phoneNumber, gender);
+            return new StandartCustomer(firstName, lastName, tcId, phoneNumber, gender);
         }
         else {
-            return new CustomerSF(firstName, lastName, tcId, phoneNumber, true, false, gender);
+            return new GreatCustomer(firstName, lastName, tcId, phoneNumber,  gender);
         }
 
     }

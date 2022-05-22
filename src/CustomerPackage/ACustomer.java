@@ -1,6 +1,6 @@
-package PrototypePattern;
+package CustomerPackage;
 
-public class CustomerPrototype implements Cloneable {
+public class ACustomer implements Cloneable {
     private String firstName="Unknown";
     private String lastName="Unknown";
     private String address="Unknown";
@@ -17,18 +17,10 @@ public class CustomerPrototype implements Cloneable {
 
     private char gender='X';
 
-    public CustomerPrototype(String firstName, String lastName, String tcId, String phoneNumber) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.tcId = tcId;
-        this.phoneNumber = phoneNumber;
-    }
-
-    @Override
-    public CustomerPrototype clone() {
-        CustomerPrototype c = null;
+    public ACustomer clone(int x) throws CloneNotSupportedException {
+        ACustomer c = null;
         try {
-            c = (CustomerPrototype) super.clone();
+            c = (ACustomer) super.clone();
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
@@ -36,15 +28,17 @@ public class CustomerPrototype implements Cloneable {
         c.setLastName("Unknown");
         c.setTcId("Unknown");
         c.setPhoneNumber("Unknown");
+        if(x==1){
+            c.isMarried=true;
+            c.hasCriminalRecord=false;
+        }
         return c;
     }
-
     /**
      *
      * GETTERS & SETTERS
      *
      */
-
 
     public String getFirstName() {
         return firstName;

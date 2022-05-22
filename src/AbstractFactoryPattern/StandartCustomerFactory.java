@@ -1,11 +1,11 @@
 package AbstractFactoryPattern;
 
 import CustomerPackage.ACustomer;
-import CustomerPackage.GreatCustomer;
+import CustomerPackage.StandartCustomer;
 
-public class GreatCustomerFactory implements ICustomerFactory {
+public class StandartCustomerFactory implements ICustomerFactory {
     @Override
     public ACustomer creatCustomer(String firstName, String lastName, String tcId, String phoneNumber, char gender) {
-        return new GreatCustomer(firstName, lastName, tcId, phoneNumber,  gender);
+        return new StandartCustomer(firstName, lastName, tcId, phoneNumber, gender);
     }
 }

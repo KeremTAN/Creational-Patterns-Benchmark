@@ -3,9 +3,9 @@ package Python;
 import java.io.*;
 
 public class PyInterpreter {
-    public void execPy(){
+    public void execPy(String pyFile){
         try {
-            String command = "cmd /c python "+System.getProperty("user.dir")+"\\src\\main\\resources\\Graph.py";
+            String command = "cmd /c python "+System.getProperty("user.dir")+"\\src\\main\\resources\\"+pyFile;
             Process p = Runtime.getRuntime().exec(command);
             p.waitFor();
             BufferedReader bri = new BufferedReader(new InputStreamReader(p.getInputStream()));
@@ -24,6 +24,8 @@ public class PyInterpreter {
 
             p.destroy();
         }
-        catch (Exception e){}
+        catch (Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 }

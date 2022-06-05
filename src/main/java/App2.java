@@ -10,81 +10,88 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Random;
 
-public class App {
+public class App2 {
     static StringBuilder sb = new StringBuilder();
     public static void main(String[] args) throws CloneNotSupportedException {
         Random r = new Random();
         int x;
-
         //None Pattern
-        Long startTime = System.currentTimeMillis();
-        for (int i=0; i<1000000; i++){
+        for (int i=0; i<100; i++){
             x=r.nextInt(2);
             if (x==0) {
+                Long startTime = System.currentTimeMillis();
                 ACustomer c = new StandartCustomer("" + i, "" + i, "" + i, "" + i, 'X');
+                Long stopTime = System.currentTimeMillis();
+                calculateTime(startTime,stopTime, "NonePattern");
             }
             else {
+                Long startTime = System.currentTimeMillis();
                 ACustomer c = new GreatCustomer("" + i, "" + i, "" + i, "" + i, 'X');
+                Long stopTime = System.currentTimeMillis();
+                calculateTime(startTime,stopTime, "NonePattern");
             }
         }
-        Long stopTime = System.currentTimeMillis();
-        calculateTime(startTime,stopTime, "NonePattern");
-
         sb = new StringBuilder();
 
         //Builder
-        Long startTime2 = System.currentTimeMillis();
-        for (int i=0; i<1000000; i++) {
+        for (int i=0; i<100; i++) {
             x = r.nextInt(2);
             if (x==0) {
+                Long startTime = System.currentTimeMillis();
                 ACustomer cus = CustomerBuilder.createCustomer("" + i, "" + i, "" + i, "" + i, 'X')
                         .buildCustomer();
+                Long stopTime = System.currentTimeMillis();
+                calculateTime(startTime,stopTime, "Builder");
             }
             else{
+                Long startTime = System.currentTimeMillis();
                 ACustomer cus = CustomerBuilder.createGreatCustomer("" + i, "" + i, "" + i, "" + i, 'X')
                         .buildCustomer();
+                Long stopTime = System.currentTimeMillis();
+                calculateTime(startTime,stopTime, "Builder" );
             }
         }
-        Long stopTime2 = System.currentTimeMillis();
-        calculateTime(startTime2,stopTime2, "Builder" );
         sb = new StringBuilder();
 
-       // Prototype
+        // Prototype
         ACustomer c = new StandartCustomer("Kerem", "Tan","11","999-999-99-99",'X');
-        Long startTime3 = System.currentTimeMillis();
-        for (int i=0; i<1000000; i++) {
+        for (int i=0; i<100; i++) {
             x=r.nextInt(2);
+            Long startTime = System.currentTimeMillis();
             ACustomer c2 = c.clone(x);
+            Long stopTime = System.currentTimeMillis();
+            calculateTime(startTime,stopTime, "Prototype");
         }
-        Long stopTime3 = System.currentTimeMillis();
-        calculateTime(startTime3,stopTime3, "Prototype");
         sb = new StringBuilder();
 
         // Abstract Factory
-        Long startTime4 = System.currentTimeMillis();
-        for(int i=0; i<1000000; i++) {
+        for(int i=0; i<100; i++) {
             x=r.nextInt(2);
             if(x==0) {
+                Long startTime = System.currentTimeMillis();
                 ACustomer cusOC = new StandartCustomerFactory().creatCustomer("" + i, "" + i, "" + i, "" + i, 'X');
+                Long stopTime = System.currentTimeMillis();
+                calculateTime(startTime,stopTime, "Abstract_Factory");
             }
             else {
+                Long startTime2 = System.currentTimeMillis();
                 ACustomer cusGC = new GreatCustomerFactory().creatCustomer("" + i, "" + i, "" + i, "" + i, 'X');
+                Long stopTime = System.currentTimeMillis();
+                calculateTime(startTime2,stopTime,"Abstract_Factory");
             }
         }
-        Long stopTime4 = System.currentTimeMillis();
-        calculateTime(startTime4,stopTime4,"Abstract_Factory");
         sb = new StringBuilder();
 
         // Simple Factory
-        Long startTime5 = System.currentTimeMillis();
-        for(int i=0; i<1000000; i++) {
+        for(int i=0; i<100; i++) {
             x=r.nextInt(2);
+            Long startTime = System.currentTimeMillis();
             ACustomer cus = new CustomerSimpleFactory().createCustomer(x, "" + i, "" + i, "" + i, "" + i, 'X');
+            Long stopTime = System.currentTimeMillis();
+            calculateTime(startTime,stopTime, "Simple_Factory");
         }
-        Long stopTime5 = System.currentTimeMillis();
-        calculateTime(startTime5,stopTime5, "Simple_Factory");
 
-        new PyInterpreter().execPy("GraphForAMillion.py");
+        new PyInterpreter().execPy("GraphForAHundred.py");
     }
 
     private static void calculateTime(Long startTime, Long stopTime, String pattern) {

@@ -1,4 +1,4 @@
-# CreationalPatternsBenchmarkTesting
+# Creational Patterns Benchmark Testing
 
 ## Statement of Work:
 <b>First of all, I would like to remind you that our main priority when using Design Patterns is to write a sustainable and clean code instead of gaining performance</b>.

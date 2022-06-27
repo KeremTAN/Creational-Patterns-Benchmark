@@ -14,3 +14,14 @@ These classes are inside the Customer package.</br>
 
 In the images below, there are a few examples of the graphics we get when we run our App.java class.</br>
 
+![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a1.png) </br>
+
+![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a2.png) </br>
+
+![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a3.png) </br>
+
+![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a4.png) </br>
+
+![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a5.png) </br>
+
+![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a6.png) </br>

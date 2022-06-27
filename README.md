@@ -9,4 +9,8 @@ It is to try to understand how our project can affect our performance, as well a
 Our main method in App.java measures the total cost of objects produced with each creational design pattern. </br>
 Our main method in App2.java measures the instantaneous cost of each object produced with each creational design pattern. </br>
 
-In order to make these observations, we wrote 2-3 concrete classes that can be produced in different ways. These classes are inside the Customer package.
+In order to make these observations, we wrote 2-3 concrete classes that can be produced in different ways. </br>
+These classes are inside the Customer package.</br>
+
+In the images below, there are a few examples of the graphics we get when we run our App.java class.</br>
+

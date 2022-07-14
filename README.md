@@ -25,3 +25,10 @@ In the images below, there are a few examples of the graphics we get when we run
 ![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a5.png) </br>
 
 ![UML](https://github.com/KeremTAN/CreationalPatternsBenchmarkTesting/blob/master/img/a6.png) </br>
+
+## Summary of Comparison Results
+In the tests we conducted at this stage, although there were exceptional results, as a result of our observations, </br>
+the creational design pattern with the highest production cost among the creational design patterns was the Builder Design Pattern. </br>
+The creational design pattern with the second highest production cost is Abstract Factory Design Pattern, </br>
+and the third highest creational design pattern is Simple Factory Design Pattern. </br>
+According to our observations, the creational design pattern with the lowest being production cost was the Prototype Design Pattern. </br>

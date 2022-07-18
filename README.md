@@ -33,7 +33,8 @@ The creational design pattern with the second highest production cost is Abstrac
 and the third highest creational design pattern is Simple Factory Design Pattern. </br>
 According to our observations, the creational design pattern with the lowest being production cost was the Prototype Design Pattern. </br>
 ## Predictions About The Comparison Results </br>
- <b>Builder Design Pattern;</b> As it is known, it allows us to produce an object that is different and with the flexibility we want. </br>
+   <b>Builder Design Pattern;</b> </br>
+   As it is known, it allows us to produce an object that is different and with the flexibility we want. </br>
  The builder design pattern first creates its own object in order to provide us with the flexibility of production, </br>
 and we can make any field adjustments we want with this created builder object. </br>
 After setting the fields we want, we produce the object we want to produce by performing the build process and </br>
@@ -41,3 +42,10 @@ we set all fields of builder object to the relevant fields of the object we prod
 In order to produce our object with the flexibility we want with the builder design pattern, </br>
 we need to produce 2 objects at a time and adjust the all fields of these objects to each other. </br>
 These may have increased more our production cost than othercreational design patterns. </br>
+   <b>Abstract Factory Design Pattern;</b> </br>
+   As it is known, it is used when we need to produce a large number of different or complex objects. </br>
+ For each object we want to produce in abstract factory design pattern, we write a class that is responsible for producing that object. </br>
+Thus, we can add or remove a new class to our system very quickly and flexibly. </br>
+In addition, we do not need to make any fixing on our system for these changes. </br>
+However, every time we produce an object with abstract factory design pattern, we actually produce 2 objects. </br>
+Therefore, the cost of producing objects with abstract factory design pattern may have been the second highest cost. </br>

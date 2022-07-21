@@ -65,7 +65,7 @@ If the number of decision mechanisms in the simple factory design pattern was in
 Therefore, there may increased the total production cost of objects for the simple factory design more than the previous patterns. </br>
 In addition, each time a new class is added or a class is removed, the class responsible for generating the objects also needs to be corrected. </br>
 
-   <b>Prototype Design Pattern;</b>
+   <b>Prototype Design Pattern;</b> </br>
    As it is known, if the objects we will produce are based on a certain template, allows us to clone an object </br>
 which we have produced before and use it by changing only the necessary fields instead of producing the a new object. </br>
 Unlike other creational design patterns, since it produces new objects by cloning an existing object instead of producing an object from </br>

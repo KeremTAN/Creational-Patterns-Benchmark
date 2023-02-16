@@ -8,7 +8,7 @@ public class PyInterpreter {
             String command = "python3 "+System.getProperty("user.dir")+"/src/main/resources/"+pyFile;;
             String osName = System.getProperty("os.name").toLowerCase();
             if(osName.contains("windows"))
-                command = "cmd /c python3 "+System.getProperty("user.dir")+"\\src\\main\\resources\\"+pyFile;
+                command = "cmd /c python "+System.getProperty("user.dir")+"\\src\\main\\resources\\"+pyFile;
             Process p = Runtime.getRuntime().exec(command);
             p.waitFor();
             p.destroy();
